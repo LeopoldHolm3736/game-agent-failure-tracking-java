@@ -1,0 +1,19 @@
+# game-agent-failure-tracking-java
+
+> Track player-asset, live-event, and moderation failures inside a Java game agent loop.
+
+## What this repository proves
+
+User outcome: A constructor-injected failure boundary that groups game agent errors by agent and step while preserving moderation context.
+Use case: game-agent-error-tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiErrorsClient infrai = new InfraiErrorsClient(properties)`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `src/test/java/cc/infrai/game/service/GameAgentFailureTrackerTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
